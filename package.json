@@ -1,5 +1,5 @@
 {
-  "name": "skystring",
+  "name": "iPoultry",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -38,7 +38,7 @@
     "react-dom": "^18.2.0",
     "react-editext": "^5.1.0",
     "react-hook-form": "^7.44.2",
-    "react-icons": "^4.11.0",
+    "react-icons": "^4.12.0",
     "react-router-dom": "^5.3.3",
     "react-scripts": "5.0.1",
     "react-select": "^5.7.4",

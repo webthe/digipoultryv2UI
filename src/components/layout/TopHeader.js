@@ -100,6 +100,9 @@ const TopHeader = (props) => {
                   <NavLink exact to="/appVideos" className="nav-link">
                      Videos
                   </NavLink>
+                  <NavLink exact to="/integrators" className="nav-link">
+                     Integrators Master
+                  </NavLink>
                   </> 
                   : <></> 
                 }
@@ -118,13 +121,16 @@ const TopHeader = (props) => {
                   <NavLink exact to="/idealweightcomparison" className="nav-link">
                     Ideal Weights
                   </NavLink>
+                  {/* <NavLink exact to="/dopReport" className="nav-link">
+                    Daily Operations
+                  </NavLink> */}
                   <NavLink exact to="/batchcomparison" className="nav-link">
                     Batch Comparison
                   </NavLink>
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">Device Management</a>
+                <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Device Management</a>
                 <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
           
                   <NavLink exact to="/managedevices" className="nav-link">
@@ -133,9 +139,9 @@ const TopHeader = (props) => {
                   <NavLink exact to="/sesorcalibration" className="nav-link">
                     Sensor Calibration
                   </NavLink>
-                  {/* <NavLink exact to="/" className="nav-link">
-                    Feed
-                  </NavLink> */}
+                  <NavLink exact to="/controlSystem" className="nav-link">
+                    Fans Scheduling
+                  </NavLink>
                 </ul>
               </li>
               </>

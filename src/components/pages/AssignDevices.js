@@ -44,7 +44,7 @@ const AssignDevices = () => {
     const [erroLogs, setErrorLogs] = useState([]);
     const onSubmit = (data, e) => {
         e.preventDefault();
-        //alert(JSON.stringify(data));
+        alert(JSON.stringify(data));
         axios.post(env.produrl+'/assigndevices/', data, { headers: headersobj}
         ).then(res=>{
                 console.log(res.data);

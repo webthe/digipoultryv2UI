@@ -18,9 +18,7 @@ const BatchMaster = (props) => {
     function handleChange() {
         props.onChange(false);
     }
-    // const { register, handleSubmit, errors, control, formState } = useForm({
-    //     mode: 'onChange'
-    // });
+  
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
         mode: 'onChange'
     });
@@ -50,23 +48,7 @@ const BatchMaster = (props) => {
                 });
                 //console.log(err.response.data.message);
         }
-        // axios.post(env.produrl + '/batchMaster', data, { headers: headersobj })
-        //     .then(res => {
-        //         console.log(res.data.message);
-        //         setShowResults(true);
-        //         setResultMessage({
-        //             error: false, message: res.data.message
-        //         });
-
-        //         e.target.reset();
-        //     }).catch((err) => {
-        //         console.log(err)
-        //         setShowResults(true)
-        //         setResultMessage({
-        //             error: true, message: err.response.data.message
-        //         });
-        //         console.log(err.response.data.message);
-        //     });
+       
     }
     const [farmers, setFarmers] = useState([]);
     const listoffarms = useRef();
@@ -79,13 +61,7 @@ const BatchMaster = (props) => {
         } catch (err) {
             console.log(err);
         }
-        // axios.get(env.produrl + '/misc/listoffarms/' + farmer, { headers: headersobj })
-        //     .then(res => {
-        //         console.log(res);
-        //         setFarmData(res.data.list)
-        //     }).catch((err) => {
-        //         console.log(err);
-        //     });
+       
     }
     listofDevices.current = async(farmer) => {
         try {
@@ -292,7 +268,7 @@ const BatchMaster = (props) => {
                                                 selected={selectedDate}
                                                 onChange={(date) => setSelectedDate(date)}
                                                 placeholderText="Start Date"
-                                                minDate={new Date()}
+                                                //minDate={new Date()}
                                                 dateFormat="dd-MMM-yyyy"
                                                 name="startDate"
                                                 className="form-control"

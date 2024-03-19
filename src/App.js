@@ -29,6 +29,9 @@ import MyProfile from "./components/pages/MyProfile";
 import AddTemplates from "./components/pages/AddTemplates";
 import AppVideos from "./components/pages/AppVideos";
 import Videos from "./components/pages/Videos";
+import DailyOperationsReport from "./components/pages/DailyOperationsReport";
+import ControlSystems from "./components/pages/ConstrolSystem";
+import Integrators from "./components/pages/Integrators";
 function App() {
   
   return (
@@ -63,7 +66,9 @@ function App() {
                 <Route exact path="/myprofile/" component={MyProfile}></Route>
                 <Route exact path="/addtemplates/" component={AddTemplates}></Route>
                 <Route exact path="/appVideos/" component={AppVideos}></Route>
-                
+                <Route exact path="/dopReport/" component={DailyOperationsReport}></Route>
+                <Route exact path="/controlSystem/" component={ControlSystems}></Route>
+                <Route exact path="/integrators/" component={Integrators}></Route>
               </div>
             </div>
             <TopFooter />

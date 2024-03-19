@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const API_URL = 'https://ipoultry.digiterrain.live/api/v1';
 
+//const API_URL = 'http://localhost:5000/api/v1';
 const apiInstance = axios.create({
   baseURL: API_URL,
 });
@@ -154,6 +155,11 @@ export const addCredentials = (data) => handleRequest(`/credentials/add`, data, 
 export const udpatePassword = (data) => handleRequest(`/forgotpassword/update`, data, 'POST',false );
 
 export const callibrations = (data) => handleRequest(`/callibrations/`, data, 'POST', true);
+export const controlsystem = (data) => handleRequest(`/controlsystem/add`, data, 'POST', true);
+
+export const updateCSStatus = (data) => handleRequest(`/controlsystem/updateStatus`, data, 'POST', true);
+export const addIntegrator = (data) => handleRequest(`/integrators/add`, data, 'POST', true);
+export const modifyIntegrator = (data) => handleRequest(`/integrators/modify`, data, 'POST', true);
 
 export const getListofFarmers_admin = () => getFromApi(`/misc/listoffarmers/`, true);
 export const getListofFarms = (input) => getFromApi(`/misc/listoffarms/${input}`, true);
@@ -204,3 +210,7 @@ export const getUserOptions = (input) => getFromApi(`/misc/userOptions/${input}`
 export const getDevices = (input) => getFromApi(`/misc/deviceListByFarmer/${input}`, true);
 export const getUserProfile = () => getFromApi(`/misc/userProfile/`, true);
 export const getVideos = () => getFromApi(`/misc/videosList/`, true);
+
+export const getControlSystemData = (input) => getFromApi(`/controlsystem/data/${input}`, true);
+
+export const getIntegratorsList = () => getFromApi(`/integrators/list`, true);

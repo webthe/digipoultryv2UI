@@ -111,7 +111,6 @@ const DailyOperations = (props) => {
                 || response.list.culling_male_status
                 ? true:false
             }
-           
             setMortality(mortality_obj)
            
         } catch (err) {
@@ -285,9 +284,13 @@ const DailyOperations = (props) => {
                                     <label>Feed</label>
                                     <input class="form-control form-control-sm" 
                                         placeholder='Enter Feed in KGs' id="inputsm" 
-                                        type="number"
+                                        type="text"
                                         defaultValue={feed.feed_status? feed.feed: ''}
                                         {...register1("feed", {
+                                            pattern: {
+                                                value: /^\d+(\.\d{1,3})?$/,
+                                                message: 'Invalid Number for feed',
+                                              },
                                             required: "Please enter feed",
                                         })}
                                         disabled = {feed.editStatus}
@@ -422,7 +425,7 @@ const DailyOperations = (props) => {
                                 <div className="form-group">
                                     <label htmlFor>Male</label>       
                                     <input class="form-control form-control-sm" 
-                                    placeholder='# of male birds' id="inputsm" type="number" 
+                                    placeholder='# of male birds' id="inputsm" type="text" 
                                     defaultValue={mortality.mortality_male_status? mortality.mortality_male: ''}
                                     {...register3("mortality_male", {
                                         //required: "Enter male mortality",
@@ -440,7 +443,7 @@ const DailyOperations = (props) => {
                                 <div className="form-group">
                                     <label htmlFor>Female</label>       
                                     <input class="form-control form-control-sm" 
-                                    placeholder='# of female birds' id="inputsm" type="number" 
+                                    placeholder='# of female birds' id="inputsm" type="text" 
                                     defaultValue={mortality.mortality_female_status? mortality.mortality_female: ''}
                                     {...register3("mortality_female", {
                                         //required: "Enter female mortality",
@@ -459,7 +462,7 @@ const DailyOperations = (props) => {
                                 <div className="form-group">
                                     <label htmlFor>Culling Male</label>       
                                     <input class="form-control form-control-sm" 
-                                    placeholder='# of male birds' id="inputsm" type="number" 
+                                    placeholder='# of male birds' id="inputsm" type="text" 
                                     defaultValue={mortality.culling_male_status? mortality.culling_male: ''}
                                     {...register3("culling_male", {
                                         //required: "Enter male culling",
@@ -477,7 +480,7 @@ const DailyOperations = (props) => {
                                 <div className="form-group">
                                     <label htmlFor>Culling Female</label>       
                                     <input class="form-control form-control-sm" 
-                                    placeholder='# of female birds' id="inputsm" type="number" 
+                                    placeholder='# of female birds' id="inputsm" type="text" 
                                     defaultValue={mortality.culling_female_status? mortality.culling_female: ''}
                                     {...register3("culling_female", {
                                         //required: "Enter female culling",
@@ -498,7 +501,7 @@ const DailyOperations = (props) => {
                                         <div className="form-group">
                                             <label>Mortality</label>
                                             <input class="form-control form-control-sm" 
-                                            placeholder='# of birds' id="inputsm" type="number" 
+                                            placeholder='# of birds' id="inputsm" type="text" 
                                             defaultValue={mortality.mortality_status? mortality.mortality: ''}
                                             {...register3("mortality", {
                                                 //required: "Enter mortality",
@@ -516,7 +519,7 @@ const DailyOperations = (props) => {
                                         <div className="form-group">
                                             <label>Culling</label>
                                             <input class="form-control form-control-sm" 
-                                            placeholder='# of birds' id="inputsm" type="number" 
+                                            placeholder='# of birds' id="inputsm" type="text" 
                                             defaultValue={mortality.culling_status? mortality.culling: ''}
                                             {...register3("culling", {
                                                 //required: "Enter mortality",
